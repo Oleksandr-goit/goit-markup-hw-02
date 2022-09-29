@@ -5,6 +5,26 @@
   --third-text-color: #ffffff;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--third-text-color);
@@ -21,7 +41,27 @@ body {
   list-style: none;
 }
 
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
 /* header */
+
+.logo {
+  margin-right: 93px;
+}
+
+.header-nav-link {
+  margin-right: 50px;
+}
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
 
 .logo {
   font-family: "Raleway";
@@ -29,10 +69,34 @@ body {
   font-size: 26px;
   line-height: calc(31 / 26);
   color: #000000;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .accent {
   color: var(--accent-color);
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav-list {
+  display: flex;
+}
+
+.header-contact-list {
+  display: flex;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-contact-list {
+  margin-left: auto;
 }
 
 .header-nav-link {
@@ -55,12 +119,19 @@ body {
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   color: inherit;
+  margin-left: 50px;
 }
+
 .header-contact-link:hover,
 .header-contact-link:focus {
   color: var(--accent-color);
 }
 /* section hero */
+
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
 
 .hero {
   background-color: #2f303a;
@@ -74,6 +145,7 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--third-text-color);
+  margin-bottom: 40px;
 }
 
 .hero-button {
@@ -86,6 +158,13 @@ body {
   color: var(--third-text-color);
   background-color: var(--accent-color);
   cursor: pointer;
+  margin: 0 auto;
+  display: block;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  min-width: 216px;
+  height: 50px;
 }
 
 .hero-button:hover,
@@ -94,6 +173,16 @@ body {
 }
 
 /* section personality */
+
+.personality-list {
+  display: flex;
+  gap: 30px;
+}
+
+.personality {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 .visually-hidden {
   position: absolute;
@@ -113,6 +202,7 @@ body {
   line-height: calc(16 / 14);
   text-transform: uppercase;
   color: var(--second-text-color);
+  margin-bottom: 10px;
 }
 
 .personality-text {
@@ -121,14 +211,35 @@ body {
 
 /* section product */
 
+.product-list {
+  display: flex;
+  gap: 30px;
+}
+
+.product {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .section-title {
   font-size: 36px;
   line-height: calc(42 / 36);
   text-align: center;
   color: var(--second-text-color);
+  margin-bottom: 50px;
 }
 
 /* section team */
+
+.team-list {
+  display: flex;
+  gap: 30px;
+}
+
+.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 .team {
   background-color: #f5f4fa;
@@ -140,15 +251,24 @@ body {
   line-height: calc(19 / 16);
   text-align: center;
   color: var(--second-text-color);
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 
 .team-text {
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
 
 /* footer */
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 
 .footer {
   background-color: #2f303a;
@@ -160,6 +280,7 @@ body {
   line-height: calc(31 / 26);
   letter-spacing: inherit;
   color: var(--third-text-color);
+  margin-bottom: 20px;
 }
 .footer-location {
   font-family: inherit;
@@ -169,6 +290,7 @@ body {
   line-height: calc(24 / 14);
   letter-spacing: inherit;
   color: var(--third-text-color);
+  margin-bottom: 9px;
 }
 
 .footer-contact {
@@ -188,6 +310,18 @@ body {
 
 /* page portfolio */
 /* section button */
+
+.project {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.project-list {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
 
 .project-button {
   font-family: inherit;
@@ -214,11 +348,23 @@ body {
 
 /* section work */
 
+.work-list {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.work-item {
+  width: calc((100% - 60px) / 3);
+}
+
 .work-title {
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
   color: var(--second-text-color);
+  margin-bottom: 4px;
 }
 
 .work-text {
